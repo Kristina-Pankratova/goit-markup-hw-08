@@ -1,0 +1,75 @@
+.header {
+  &-page {
+    align-items: center;
+    border-bottom: 1px solid #ececec;
+  }
+  &-content {
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+.header-content,
+.nav-main,
+.nav-contacts-menu {
+  display: flex;
+}
+.nav-button-conteiner {
+  margin-right: auto;
+}
+.nav-item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.nav-contacts:not(:last-child) {
+  margin-right: 30px;
+}
+.underline-link {
+  position: relative;
+  padding: 38px 0px;
+  background-color: inherit;
+  width: 100%;
+  height: 4px;
+  transition: background-color $animation;
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: $focus-color;
+    border-radius: 2px;
+  }
+}
+.nav-link {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: $main-color;
+  transition: color 250ms $animation;
+  &:hover,
+  &:focus {
+    color: $focus-color;
+  }
+}
+.contacts {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  color: $secondary-text-color;
+  fill: $secondary-text-color;
+  &:hover,
+  &:focus {
+    color: $focus-color;
+    fill: $focus-color;
+  }
+  svg {
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+}

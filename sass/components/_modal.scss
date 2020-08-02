@@ -1,0 +1,213 @@
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transform: scale(1, 1);
+  transition: opacity $animation, transform $animation;
+}
+.is-hidden {
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0;
+  transform: scale(0, 0);
+}
+.order-modal-window {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 528px;
+  height: 581px;
+  padding: 40px 40px;
+  background-color: $white-text-color;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+}
+.close-modal-window {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: $white-text-color;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+  transition: all $animation;
+  .close-svg {
+    width: 11px;
+    height: 11px;
+    fill: #000000;
+    &:focus-within,
+    &:hover {
+      width: 11px;
+      height: 11px;
+      fill: $focus-color;
+    }
+  }
+}
+.order-header {
+  margin-bottom: 30px;
+  padding: 0px 25px;
+}
+.form-wraper {
+  cursor: pointer;
+  position: relative;
+  margin-bottom: 28px;
+  input {
+    width: 100%;
+    height: 40px;
+    padding: 12px 18px 12px 42px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    transition: all $animation;
+    &:focus,
+    &:hover {
+      width: 100%;
+      height: 40px;
+      padding: 12px 18px 12px 42px;
+      box-sizing: border-box;
+      border-radius: 4px;
+      outline: none;
+      border: 1px solid $focus-color;
+      .order-icon {
+        fill: $focus-color;
+      }
+    }
+  }
+  .order-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    fill: $main-color;
+    transition: fill $animation;
+  }
+}
+.order-label {
+  position: absolute;
+  left: 42px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: Roboto;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: $secondary-text-color;
+  transition: transform $animation;
+}
+.order-input:not(:placeholder-shown) ~ .order-label,
+.form-wraper:focus-within .order-label,
+.form-wraper:hover .order-label {
+  transform: translateY(-40px) translateX(-10px);
+  color: $focus-color;
+  fill: $focus-color;
+}
+.order-input:not(:placeholder-shown) .order-icon {
+  fill: $focus-color;
+}
+.comment-wraper {
+  position: relative;
+  .comment-textarea {
+    width: 100%;
+    height: 120px;
+    padding: 12px 16px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    outline: none;
+  }
+  &:focus-within,
+  &:hover {
+    textarea {
+      border: 1px solid $focus-color;
+    }
+    .comment-label {
+      color: var(--link-focus-color);
+      transform: translateX(-440px) translateY(-20px);
+    }
+  }
+}
+.comment-label {
+  position: absolute;
+  transform: translateX(-430px) translateY(12px);
+  font-family: Roboto;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: $secondary-text-color;
+  transition: all $animation;
+}
+.policy-checkbox {
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  &:checked + .checkbox {
+    background-image: url(../images/Vector.svg);
+    background-color: $focus-color;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 2px;
+    border: 2px inherit;
+  }
+}
+.checkbox {
+  position: absolute;
+  height: 15px;
+  width: 16px;
+  left: 50px;
+  background-image: url(../images/Vector-off.svg);
+  background-color: $white-text-color;
+  transition: background-image $animation;
+}
+.policy-label {
+  display: flex;
+  align-items: center;
+  padding: 0px 25px;
+  margin-bottom: 30px;
+  justify-content: space-evenly;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: $secondary-text-color;
+}
+.order-buttom {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 30px;
+  outline: none;
+  color: $white-text-color;
+  padding: 10px 55px;
+  background-color: $focus-color;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+}
+.policy-link {
+  text-decoration: underline;
+  color: $focus-color;
+  justify-content: center;
+}

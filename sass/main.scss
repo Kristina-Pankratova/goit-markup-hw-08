@@ -1,0 +1,18 @@
+//base
+@import './utils/variables';
+@import './utils/base';
+//page
+@import './components/logo';
+@import './components/page-header';
+//main-page
+@import './components/main-section';
+@import './components/second-section';
+@import './components/experience-section';
+@import './components/team-section';
+@import './components/client-section';
+@import './components/footer';
+@import './components/modal';
+//portfolio-page
+@import './components/portfolio-base';
+@import './components/portfolio-interactive-menu';
+@import './components/portfolio-card-menu';

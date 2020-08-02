@@ -1,0 +1,121 @@
+//address
+.footer-content {
+  background-color: #2f303a;
+}
+.social-content {
+  display: flex;
+  align-items: baseline;
+}
+.address-content {
+  width: 231px;
+  padding-top: 45px;
+  padding-bottom: 28px;
+  margin-right: 69px;
+}
+.site-address {
+  margin-top: 8px;
+}
+.address {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  font-style: normal;
+  color: $white-text-color;
+}
+.footer-contacts {
+  margin-top: 9px;
+  .footer-nav {
+    @extend .address;
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+//join
+.join-content {
+  width: 206px;
+  padding-top: 72px;
+  padding-bottom: 50px;
+  margin-right: 94px;
+}
+.footer-title {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: $white-text-color;
+}
+.join-list {
+  display: flex;
+}
+.footer-network-icon,
+.footer-subscribe-icon {
+  width: 20px;
+  height: 20px;
+  fill: $white-text-color;
+}
+.social-item:not(:last-child) {
+  margin-right: 10px;
+}
+.footer-network-link {
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color $animation;
+  &:hover {
+    background-color: $focus-color;
+  }
+}
+//subscribe
+.footer-subscribe {
+  padding-top: 72px;
+  padding-bottom: 50px;
+}
+.footer-input {
+  padding: 15px 16px;
+  margin-right: 12px;
+  width: 358px;
+  background-color: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  outline: none;
+  color: rgba(255, 255, 255, 0.3);
+}
+.footer-button {
+  position: relative;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 30px;
+  color: $white-text-color;
+  align-items: center;
+  text-align: center;
+  padding: 10px 60px 10px 29px;
+  background-color: $focus-color;
+  border-radius: 4px;
+  border: none;
+  .footer-subscribe-icon {
+    position: absolute;
+    right: 28px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+//developed
+.site-development {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 18px;
+  padding-bottom: 24px;
+}
+.developed {
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 24px;
+  text-align: center;
+  margin: 0px;
+  color: rgba(255, 255, 255, 0.4);
+}

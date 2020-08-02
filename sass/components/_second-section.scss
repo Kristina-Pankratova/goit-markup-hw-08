@@ -1,0 +1,37 @@
+.second-section {
+  padding-top: 94px;
+  display: flex;
+  &-item {
+    width: calc((100% - 30px * 3) / 4);
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}
+.second-section-pic {
+  background-color: $bg-color;
+  border-radius: 4px;
+  width: 100%;
+  padding: 25px 100px;
+}
+.criteria-icon {
+  width: 70px;
+  height: 70px;
+}
+.criteria-title {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  margin-top: 30px;
+  margin-bottom: 0px;
+  color: $main-color;
+}
+.criteria-description-text {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  color: $secondary-text-color;
+}

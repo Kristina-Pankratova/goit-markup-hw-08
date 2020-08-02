@@ -1,0 +1,32 @@
+.client-section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.client-list {
+  display: flex;
+}
+.client-item {
+  width: calc((100% - 30px * 5) / 6);
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+.client-link {
+  width: 170px;
+  height: 90px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border: 1px solid $icon-grey-color;
+  border-radius: 4px;
+  box-sizing: border-box;
+  fill: $icon-grey-color;
+  transition: border-color $animation, fill $animation;
+  &:hover,
+  &:focus {
+    box-sizing: border-box;
+    border: 1px solid $focus-color;
+    border-radius: 4px;
+    fill: $focus-color;
+  }
+}

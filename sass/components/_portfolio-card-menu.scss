@@ -1,0 +1,64 @@
+.portfolio-menu {
+  margin-top: 34px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.portfolio-menu-item {
+  width: calc((100% - 30px * 2) / 3);
+  margin-right: 30px;
+  margin-bottom: 30px;
+  border: 1px solid #eeeeee;
+  &:hover {
+    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      0px 1px 1px rgba(0, 0, 0, 0.12);
+    .image-content {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  &:nth-child(3n) {
+    margin-right: 0px;
+  }
+  &:nth-child(n + 7) {
+    margin-bottom: 0px;
+  }
+}
+.portfolio-background {
+  position: relative;
+  overflow: hidden;
+}
+.image-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform $animation, opacity $animation;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 28px;
+  padding: 63px 24px;
+  color: $white-text-color;
+}
+.portfolio-card-body {
+  padding: 20px 24px;
+  .project {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 36px;
+    margin-bottom: 0px;
+    display: flex;
+    color: $main-color;
+  }
+  .working {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 30px;
+    margin-top: 4px;
+    display: flex;
+    color: $secondary-text-color;
+  }
+}

@@ -1,0 +1,30 @@
+.main-logo {
+  @extend .footer-logo;
+  margin-right: 85px;
+  display: flex;
+  align-items: center;
+
+  &-web {
+    color: $focus-color;
+  }
+  &-studio {
+    color: #000000;
+  }
+}
+.footer-logo {
+  font-family: $logo-font;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 31px;
+  letter-spacing: 0.03em;
+  &-web {
+    color: $focus-color;
+  }
+  &-studio {
+    color: #000000;
+  }
+  &-studio-white {
+    color: $white-text-color;
+  }
+}
